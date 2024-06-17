@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+
+    <!--ICONES-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--ICONES-->
+
+    <!--FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <!--FONTS-->
+
+    <title>Pomodoro</title>
+</head>
+
+<body>
+    <section>
+        <!--  --CONTEINER-- -->
+        <div class="conteiner">
+
+            <!--  --BLOQUEIO-DO-SITE-- -->
+            <div class="bloqueio-site">
+                <!--  --BUTTON-DO-SITE-- -->
+                <div class="button-do-site">
+
+                    <!--  --BNT-CONTATO-- -->
+                    <div class="bnt-contato">
+                        <!--  --BNT-ABRIR-- -->
+                        <div class="btn-abrir" id="btnMenu">
+                            <i class="fa-solid fa-bars"></i>
+                        </div><!--  --FIM-BNT-ABRIR-- -->
+
+                        <!--  --SITES-BLOQUEADOS-- -->
+                        <div class="sites-bloqueados" id="sites-bloqueados">
+                            <!--BTN-FECHAR-->
+                            <div class="btn-fechar">
+                                <i id="fechar" class="fa-solid fa-xmark"></i>
+                            </div><!--FIM-BTN-FECHAR-->
+
+
+
+                            <div class="buscar-box">
+                                <div class="lupa-buscar">
+                                    <button id="bloqueio"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+                                </div>
+                                <div  id="abrir-botao" class="abrir-botao verificacao-input">
+                                    <input type="text" name="" id="buscas"
+                                        placeholder="Digite o URL do site" required data-tipo="verificacao">
+                                       
+                                </div>
+                                <div class="exit">
+                                    <i class="fa-solid fa-circle-xmark"></i>
+                                </div>
+                            </div>
+
+                            <div class="overlay" id="overlay">
+                                <div class="iframe-container">
+                                    <iframe id="iframe" src=""></iframe>
+                                </div>
+                                <p>Você está bloqueado temporariamente. Por favor, aguarde...</p>
+                            </div>
+                        
+
+
+
+                        </div><!--  --FIM-SITES-BLOQUEADOS-- -->
+
+                    </div><!--  --FIM-BNT-CONTATO-- -->
+                </div><!--  --FIM-BUTTON-DO-SITE-- -->
+
+            </div><!--  --FIM-BLOQUEIO-DO-SITE-- -->
+
+            <div class="painel"><!--  --PAINEL-- -->
+                <p id="work" class="botoes">Sites</p>
+                <p id="break" class="botoes">Jogos</p>
+            </div><!--  --FIM-PAINEL-- -->
+
+            <div class="timer"><!--  --TIMER-- -->
+
+                <div class="circle"><!--  --CIRCLE-- -->
+
+                    <div class="time"><!--  --TIME-- -->
+                        <p id="minutos">00</p>
+                        <p>:</p>
+                        <p id="secunds">00</p>
+                    </div><!--  --FIM-TIME-- -->
+
+                </div><!--  --FIM-CIRCLE-- -->
+
+            </div><!--  --FIM-TIMER-- -->
+            <div class="controles"><!--  --CONTROLES-- -->
+                <button id="start"><i class="fa-solid fa-circle-play"></i></button><!--  --START-BUTTON-- -->
+                <a href="?" id="reset"><i class="fa-solid fa-circle-stop"></i></a><!--  --RESET-BUTTON-- -->
+            </div><!--  --FIM-CONTROLES-- -->
+
+        </div>
+        </div><!--  --FIM-CONTEINER-- -->
+
+    </section>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

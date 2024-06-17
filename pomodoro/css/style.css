@@ -1,0 +1,292 @@
+:root {
+    --color-degrade: linear-gradient(90deg, rgba(40, 2, 47, 1) 0%, rgba(156, 53, 176, 1) 35%, rgba(99, 26, 148, 1) 100%);
+    --color-branca: #FFF;
+    --color-primary: hsl(235, 35%, 19%);
+    --color-secundary: hsl(358, 78%, 69%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    justify-content: center;
+    text-align: center;
+
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 1.3rem;
+    background-color: var(--color-primary) !important;
+}
+
+/*---------CABEÇHALHO------*/
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.conteiner h1 {
+    margin-top: 0.2em;
+    color: #FFF;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.painel {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 20rem;
+    margin-block: 2rem;
+    border-radius: 10rem;
+    box-shadow: 3px 0px 36px 6px rgba(0, 0, 0, 0.68);
+    -webkit-box-shadow: 3px 0px 36px 6px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 3px 0px 36px 6px rgba(0, 0, 0, 0.68);
+}
+
+.painel p {
+    transition: 2s all ease-out;
+    cursor: pointer;
+    color: #FFF;
+    margin: 0.3em;
+}
+
+.painel .botoes:hover {
+    color: #ffffffa8;
+    transform: scale(1.01);
+}
+.button-do-site {
+    position: relative;
+    display: flex; 
+    margin-right: 60rem;
+    flex-direction: column-reverse;
+}
+.sites-bloqueados {
+    background-color: rgba(26, 37, 80, 0.89);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 33333;
+    width: 0%;
+    overflow: hidden;
+    transition: all 0.5s;
+
+}
+
+.sites-bloqueados.abrir-menu {
+    width: 50%;
+}
+
+.sites-bloqueados .btn-fechar i {
+    color:black;
+    padding: 5px 4%;
+    display: block;
+    margin-right: -30rem;
+}
+/*button#bloqueio {
+    font-size: 25px;
+    background: none;
+    color: black;
+    padding: 5px 2%;
+    position: relative; 
+    margin: 0 auto;
+    width: 90%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+ ----FIM DO CABEÇALHO--*/
+
+
+.buscar-box{
+    width: 80px;
+    height: 80px;
+    justify-content: space-between;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    transition: all 1s;
+}
+.buscar-box.ativar{
+    width: 600px;
+}
+.buscar-box .lupa-buscar, .buscar-box .exit{
+    min-width: 90px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.buscar-box .exit{
+    margin-top: 5px;
+    min-width: 8rem;
+}
+.buscar-box .lupa-buscar i{
+   font-size: 25px;
+}
+input#buscas{
+    outline: 0;
+    border: 1px solid black;
+    color: black;
+    padding: 3px;
+    border-radius: 15px;
+    text-align: left;
+    padding-left: 20px;
+    width: 20rem;
+    font-size: 14px;
+}
+.buscar-box .abrir-botao{
+   position: absolute;
+   left: 80px;
+   line-height: 80px;
+}
+.buscar-box button{
+    margin-top: 10px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 13rem;
+    height: 13rem;
+    box-shadow: 3px 0px 36px 6px rgba(0, 0, 0, 0.68);
+    -webkit-box-shadow: 3px 0px 36px 6px rgba(0, 0, 0, 0.68);
+    -moz-box-shadow: 3px 0px 36px 6px rgba(0, 0, 0, 0.68);
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    background-color: var(--color-secundary);
+    position: relative;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+.time {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.controles button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    margin-left: 75px;
+}
+
+.controles #reset {
+    display: none;
+    color: black;
+}
+
+button {
+    font-size: 25px;
+    margin-top: 15px;
+    border: none;
+    background: none;
+}
+
+i {
+    cursor: pointer;
+}
+
+ .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    flex-direction: column;
+}
+.iframe-container {
+    width: 80%;
+    height: 80%;
+}
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media screen and (max-width:490px) {
+
+    html,
+    body {
+        display: flex;
+        width: 300px;
+        height: 150px;
+    }
+
+    .conteiner h1 {
+        display: none;
+    }
+
+    .painel {
+        display: none;
+    }
+
+    .timer {
+        display: flex;
+        justify-content: center;
+        width: 0 !important;
+        height: 0 !important;
+
+    }
+
+    .circle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 0;
+        height: 0;
+    }
+
+    .controles button {
+        align-items: center;
+        margin: 0rem;
+        margin-left: 1.5rem;
+    }
+
+    .fa-classic,
+    .fa-regular,
+    .fa-solid,
+    .far,
+    .fas {
+        margin: 1rem;
+    }
+}
